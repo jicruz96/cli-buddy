@@ -9,7 +9,7 @@ from .argument import ArgumentInfo
 
 
 class CLI(Model[ArgumentInfo]):
-    """Base class for instant_cli CLIs."""
+    """Base class for cli_buddy CLIs."""
 
     __field_class__ = ArgumentInfo
 

@@ -1,18 +1,18 @@
 
-# `instant-cli` - The fastest, simplest way to create a CLI in Python
+# The fastest, simplest way to create a CLI in Python
 
-`instant-cli` provides an ergonomic syntax for creating command-line interfaces in Python.
+`cli-buddy` provides an ergonomic syntax for creating command-line interfaces in Python.
 
-### With `instant-cli`, 👇 this code snippet is all it takes to build a CLI.
+### With `cli-buddy`, 👇 this code snippet is all it takes to build a CLI.
 
 ```python
-from instant_cli import CLI
+from cli_buddy import CLI
 
 class MyCLI(CLI):
     arg: str
 ```
 
-Under the hood, `instant-cli` is a pydantic-flavored wrapper around the built-in `argparse` module.
+Under the hood, `cli-buddy` is a pydantic-flavored wrapper around the built-in `argparse` module.
 
 
 ## Requirements
@@ -21,7 +21,7 @@ Under the hood, `instant-cli` is a pydantic-flavored wrapper around the built-in
 ## Install
 
 ```bash
-pip install instant-cli
+pip install cli-buddy
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ This code snippet...
 
 ```python
 # main.py
-from instant_cli import CLI
+from cli_buddy import CLI
 
 class TerminalTimer(CLI):
     seconds: int
@@ -121,7 +121,7 @@ The `Argument` function takes the same arguments as the built-in `argparse.Argum
 For example, this...
 
 ```python
-from instant_cli import CLI, Argument
+from cli_buddy import CLI, Argument
 
 
 class TerminalTimer(CLI):

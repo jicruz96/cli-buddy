@@ -3,11 +3,10 @@ from __future__ import annotations
 import typing
 from argparse import Action, FileType
 
+from cli_buddy.exceptions import InvalidArgumentError
 from easydatamodel._typing import UNASSIGNED, UnassignedType, is_optional_type
 from easydatamodel.field import FieldInfo
 from easydatamodel.model import Model
-
-from instant_cli.exceptions import InvalidArgumentError
 
 T = typing.TypeVar("T")
 
@@ -47,7 +46,7 @@ def Argument(*flags: str, **kwargs: typing.Unpack[ArgParseKwargs[T]]) -> typing.
 
 
 class ArgumentInfo(FieldInfo):
-    """Represents a column in a instant-cli model.
+    """Represents a column in a cli-buddy model.
 
     Attributes:
         default: default column value.
