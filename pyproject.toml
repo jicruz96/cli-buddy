@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cli-buddy"
-version = "0.2.1"
+version = "0.2.2"
 description = "The fastest, simplest way to create CLIs in Python"
 authors = ["J.I. Cruz <hello@jicruz.com>"]
 readme = "README.md"
@@ -23,7 +23,7 @@ include = ["cli_buddy/**/*.pyi"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-easydatamodel = ">=0.0.6"
+easydatamodel = ">=0.1.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
