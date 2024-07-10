@@ -18,6 +18,7 @@ classifiers = [
   "Programming Language :: Python :: 3",
 ]
 packages = [{ include = "cli_buddy", from = "." }]
+include = ["cli_buddy/**/*.pyi"]
 
 
 [tool.poetry.dependencies]
