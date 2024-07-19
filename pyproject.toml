@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cli-buddy"
-version = "0.2.4"
+version = "0.2.5"
 description = "The fastest, simplest way to create CLIs in Python"
 authors = ["J.I. Cruz <hello@jicruz.com>"]
 readme = "README.md"
