@@ -82,7 +82,7 @@ class ArgumentInfo(FieldInfo):
             if required is True and "default" in argparse_kwargs:
                 raise InvalidArgumentError("Cannot have a required argument with a default value.")
         default = argparse_kwargs.get("default", UNASSIGNED)
-        if default is not UNASSIGNED:
+        if default is not UNASSIGNED and "default: " not in argparse_kwargs.get("help", ""):
             argparse_kwargs["help"] = f"{argparse_kwargs.get('help', '')} (default: {default})"
         default_factory = UNASSIGNED
         argparse_type = argparse_kwargs.get("type", UNASSIGNED)
