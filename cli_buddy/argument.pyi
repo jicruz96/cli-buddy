@@ -1,9 +1,9 @@
 import typing
+from .cli import CLI as CLI
 from argparse import Action, FileType
 from cli_buddy.exceptions import InvalidArgumentError as InvalidArgumentError
 from easydatamodel._typing import UNASSIGNED, UnassignedType as UnassignedType
 from easydatamodel.field import FieldInfo
-from easydatamodel.model import Model as Model
 
 T = typing.TypeVar('T')
 
@@ -29,5 +29,5 @@ class ArgumentInfo(FieldInfo):
     def from_annotation(cls, name: str, type: UNASSIGNED) -> typing.Self: ...
     @classmethod
     def from_namespace(cls, name: str, default: typing.Any, type: typing.Any) -> typing.Self: ...
-    def __set_name__(self, owner: type[Model[typing.Self]], name: str) -> None: ...
+    def __set_name__(self, owner: type['CLI'], name: str) -> None: ...
     def copy(self) -> ArgumentInfo: ...

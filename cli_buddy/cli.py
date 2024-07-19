@@ -3,12 +3,12 @@ from __future__ import annotations
 from argparse import ArgumentParser
 from typing import Any
 
-from easydatamodel.model import Model
+from easydatamodel.model import _GenericModel  # type: ignore
 
 from .argument import ArgumentInfo
 
 
-class CLI(Model[ArgumentInfo]):
+class CLI(_GenericModel[ArgumentInfo]):
     """Base class for cli_buddy CLIs."""
 
     __field_class__ = ArgumentInfo

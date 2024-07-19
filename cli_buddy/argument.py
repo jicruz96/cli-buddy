@@ -3,12 +3,15 @@ from __future__ import annotations
 import typing
 from argparse import Action, FileType
 
-from cli_buddy.exceptions import InvalidArgumentError
 from easydatamodel._typing import UNASSIGNED, UnassignedType, is_optional_type
 from easydatamodel.field import FieldInfo
-from easydatamodel.model import Model
+
+from cli_buddy.exceptions import InvalidArgumentError
 
 T = typing.TypeVar("T")
+
+if typing.TYPE_CHECKING:
+    from .cli import CLI
 
 
 class ArgParseKwargs(typing.Generic[T], typing.TypedDict):
@@ -114,8 +117,8 @@ class ArgumentInfo(FieldInfo):
         )
         return super().__repr__()[:-1] + f" argparse_args={{{argparse_args}}}>"
 
-    def __set_name__(self, owner: type[Model[typing.Self]], name: str) -> None:
-        super().__set_name__(owner, name)
+    def __set_name__(self, owner: type["CLI"], name: str) -> None:  # type: ignore
+        super().__set_name__(owner, name)  # type: ignore
         is_flag = False
         if len(self.flags) > 0:
             is_flag = True

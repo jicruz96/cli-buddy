@@ -23,7 +23,7 @@ include = ["cli_buddy/**/*.pyi"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-easydatamodel = ">=0.2.0"
+easydatamodel = ">=0.3.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
